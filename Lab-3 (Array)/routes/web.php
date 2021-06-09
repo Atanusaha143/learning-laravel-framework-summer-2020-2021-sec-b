@@ -34,6 +34,12 @@ Route::get('/home',[HomeController::class, 'index']);
 // User List
  Route::get('/user/list',[UserController::class, 'index']);
  Route::get('/user/details/{id}',[UserController::class, 'details']);
+ Route::get('/user/edit/{id}',[UserController::class, 'edit']);
+ Route::post('/user/edit/{id}',[UserController::class, 'update']);
+ Route::get('/user/create',[UserController::class, 'create']);
+ Route::post('/user/create',[UserController::class, 'insert']);
+ Route::get('/user/delete/{id}',[UserController::class, 'delete']);
+ Route::post('/user/delete/{id}',[UserController::class, 'destroy']);
 
 // Logout
 Route::get('/logout',[LogoutController::class, 'index']);

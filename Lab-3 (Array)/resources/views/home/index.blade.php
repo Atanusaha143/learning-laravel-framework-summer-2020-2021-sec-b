@@ -18,6 +18,7 @@
                 <h3>Welcome Home!</h3>
             </div>
             <div class="row justify-content-center">
+                <a href="/user/create" class="btn btn-primary mr-2">Create User</a>
                 <a href="/user/list" class="btn btn-warning mr-2">User List</a>
                 <a href="/logout" class="btn btn-danger">Logout</a>
             </div>

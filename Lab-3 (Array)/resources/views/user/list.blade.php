@@ -15,19 +15,23 @@
             <h3 class="border border-primary rounded m-4 px-5 py-2">User List</h3>
         </div>
         <div class="row justify-content-center mt-2">
-            <div class="col-4">
+            <div class="col-6">
                 <table class="table table-striped table-bordered">
                     <tr class="table-success">
                         <th> Id </th>
                         <th> Name </th>
+                        <th> Email </th>
                         <th> Actions </th>
                     </tr>
                     @foreach($userList as $user)
                         <tr>
                             <td>{{$user['id']}}</td>
                             <td>{{$user['name']}}</td>
+                            <td>{{$user['email']}}</td>
                             <td>
                                 <a href="/user/details/{{$user['id']}}" class="btn btn-success mr-2">Details</a>
+                                <a href="/user/edit/{{$user['id']}}" class="btn btn-warning mr-2">Update</a>
+                                <a href="/user/delete/{{$user['id']}}" class="btn btn-danger mr-2">Delete</a>
                             </td>
                         </tr>
                     @endforeach

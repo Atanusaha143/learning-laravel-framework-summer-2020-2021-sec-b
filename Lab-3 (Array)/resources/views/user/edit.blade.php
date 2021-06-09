@@ -17,19 +17,30 @@
         <div class="row justify-content-center mt-2">
             <div class="col-6">
                 <table class="table table-striped table-bordered">
-                    <tr class="table-success">
-                        <th> Name </th>
-                        <th> Email </th>
+                <form method="POST">
+                    <tr>
+                        <td>Name:</td>
+                        <td>
+                            <input type="text" name="name" value="{{$user['name']}}" class="form-control">
+                        </td>
                     </tr>
                     <tr>
-                        <td>{{$user['name']}}</td>
-                        <td>{{$user['email']}}</td>
+                        <td>Email:</td>
+                        <td>
+                            <input type="email" name="email" value="{{$user['email']}}" class="form-control">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <input type="submit" name="submit" value="Update" class="btn btn-success btn-block">
+                        </td>
                     </tr>
                     <tr>
                         <td colspan="2">
                             <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
                         </td>
                     </tr>
+                    </form>
                 </table>
             </div>
         </div>

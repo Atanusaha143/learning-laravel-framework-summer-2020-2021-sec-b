@@ -12,25 +12,32 @@
 <body>
     <div class="container mt-3">
         <div class="row justify-content-center">
-            <h3 class="border border-primary rounded m-4 px-5 py-2">User Details</h3>
+            <h3 class="border border-primary rounded m-4 px-5 py-2">Delete User</h3>
         </div>
         <div class="row justify-content-center mt-2">
             <div class="col-6">
+            <form method="POST">
                 <table class="table table-striped table-bordered">
                     <tr class="table-success">
                         <th> Name </th>
                         <th> Email </th>
                     </tr>
-                    <tr>
-                        <td>{{$user['name']}}</td>
-                        <td>{{$user['email']}}</td>
-                    </tr>
-                    <tr>
-                        <td colspan="2">
-                            <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>{{$user['name']}}</td>
+                            <td>{{$user['email']}}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <input type="submit" name="submit" value="Delete" class="btn btn-success btn-block">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
+                            </td>
+                        </tr>
                 </table>
+                </form>
             </div>
         </div>
     </div>
