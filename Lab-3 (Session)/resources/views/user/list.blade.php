@@ -24,7 +24,6 @@
                     </tr>
                     @foreach($userList as $user)
                         @if($user['status'] == 1)
-                        {
                             <tr>
                                 <td>{{$user['id']}}</td>
                                 <td>{{$user['username']}}</td>
@@ -34,7 +33,6 @@
                                     <a href="/user/delete/{{$user['id']}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
-                        }
                         @endif
                     @endforeach
                     <tr>
