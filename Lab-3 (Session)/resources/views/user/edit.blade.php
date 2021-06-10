@@ -40,6 +40,11 @@
                                     </tr>
                                 </form>
                             </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
+                                </td>
+                            </tr>
                             @break
                         @endif
                     @endforeach

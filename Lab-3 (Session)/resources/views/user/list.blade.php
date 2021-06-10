@@ -37,6 +37,11 @@
                         }
                         @endif
                     @endforeach
+                    <tr>
+                        <td colspan="4">
+                            <a href="/home" class="btn btn-secondary btn-block">Back</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>

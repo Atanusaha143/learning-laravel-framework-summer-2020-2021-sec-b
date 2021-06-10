@@ -42,6 +42,11 @@
                                     <input type="submit" name="submit" value="Create" class="btn btn-success btn-block">
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="/home" class="btn btn-secondary btn-block">Back</a>
+                                </td>
+                            </tr>
                         </form>
                     </tr>
                 </table>

@@ -29,6 +29,11 @@
                             </tr>
                         @endif
                     @endforeach
+                    <tr>
+                        <td colspan="2">
+                            <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
+                        </td>
+                    </tr>
                 </table>
             </div>
         </div>
