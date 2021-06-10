@@ -9,13 +9,19 @@ class LoginController extends Controller
     public function index()
     {
         $check = session()->has('login');
+        $msg = session()->has('loginFailedMessage');
         if($check)
         {
             return redirect('/home');
         }
+        else if($msg)
+        {
+            $info = session()->get('loginFailedMessage');
+            return view('login.index')->with('msg', $info);
+        }
         else
         {
-            return view('login.index');
+            return view('login.index')->with('msg','');
         }
     }
 
@@ -42,7 +48,7 @@ class LoginController extends Controller
                 return redirect('/home');
             }
         }
-
+        $req->session()->flash('loginFailedMessage','Invalid User');
         return redirect('/login');
     }
 }

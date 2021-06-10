@@ -17,6 +17,11 @@
                     <div class="row justify-content-center">
                         <h4 class="text-muted mb-3">Enter Login Credential</h4>
                     </div>
+                    <div class="row justify-content-center">
+                        @if($msg)
+                            <h5 class="text-danger mb-3">**{{$msg}}</h5>
+                        @endif
+                    </div>
                     <form method="POST">
                         <input type="text" class="form-control mb-2" placeholder="Username" name="username">
                         <input type="password" class="form-control" placeholder="Password" name="password">
