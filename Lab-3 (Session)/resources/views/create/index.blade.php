@@ -38,6 +38,12 @@
                                 </td>
                             </tr>
                             <tr>
+                                <td>Confirm Password</td>
+                                <td>
+                                    <input type="password" name="cpassword" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
                                 <td colspan="2">
                                     <input type="submit" name="submit" value="Create" class="btn btn-success btn-block">
                                 </td>
