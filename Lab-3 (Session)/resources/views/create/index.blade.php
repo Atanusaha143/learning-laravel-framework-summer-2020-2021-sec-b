@@ -14,6 +14,11 @@
         <div class="row justify-content-center">
             <h3 class="border border-primary rounded m-4 px-5 py-2">Create User</h3>
         </div>
+        <div class="row justify-content-center">
+            @if($msg)
+                <h5 class="text-danger">{{$msg}}</h5>
+            @endif
+        </div>
         <div class="row justify-content-center mt-2">
             <div class="col-6">
                 <table class="table table-striped table-bordered">
