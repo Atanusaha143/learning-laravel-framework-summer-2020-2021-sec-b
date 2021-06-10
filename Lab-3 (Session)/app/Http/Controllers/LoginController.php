@@ -38,6 +38,7 @@ class LoginController extends Controller
             if($uname != "" && $pass != "" && $data[$i]['username'] == $uname && $data[$i]['password'] == $pass && $data[$i]['status'] == 1)
             {
                 $req->session()->put('login','1');
+                $req->session()->put('username',$uname);
                 return redirect('/home');
             }
         }

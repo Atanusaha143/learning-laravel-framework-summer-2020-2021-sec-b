@@ -24,7 +24,8 @@ class HomeController extends Controller
         $check = session()->has('login'); // get session value
         if($check) // if session exists
         {
-            return view('home.index'); // then redirect to home
+            $uname = session('username');
+            return view('home.index')->with('uname', $uname); // then redirect to home
         }
         else // otherwise
         {

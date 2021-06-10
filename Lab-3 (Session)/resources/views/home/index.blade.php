@@ -15,7 +15,7 @@
     <main>
         <div class="container mt-3">
             <div class="row justify-content-center">
-                <h3>Welcome Home!</h3>
+                <h3>Welcome Home, {{$uname}}!</h3>
             </div>
             <div class="row justify-content-center">
                 <a href="/user/create" class="btn btn-success mr-2">Create New User</a>
