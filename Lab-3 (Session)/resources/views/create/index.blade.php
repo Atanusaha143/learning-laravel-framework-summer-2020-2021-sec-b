@@ -7,6 +7,8 @@
     <!-- for bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
+    <!-- google recaptcha  -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Create User</title>
 </head>
 <body>
@@ -46,6 +48,13 @@
                                 <td>Confirm Password</td>
                                 <td>
                                     <input type="password" name="cpassword" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="row justify-content-center">
+                                        <div class="g-recaptcha" data-sitekey="6LdDVS8bAAAAAH5Nkj59zh6wXlLm3omnaILpWL_Y" required></div>
+                                    </div>
                                 </td>
                             </tr>
                             <tr>
