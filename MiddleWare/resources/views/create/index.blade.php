@@ -55,7 +55,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="/home" class="btn btn-secondary btn-block">Back</a>
+                                    <a href="{{route('home.index')}}" class="btn btn-secondary btn-block">Back</a>
                                 </td>
                             </tr>
                         </form>

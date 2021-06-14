@@ -18,9 +18,9 @@
                 <h3>Welcome Home, {{$uname}}!</h3>
             </div>
             <div class="row justify-content-center">
-                <a href="/user/create" class="btn btn-success mr-2">Create New User</a>
-                <a href="/user/list" class="btn btn-warning mr-2">User List</a>
-                <a href="/logout" class="btn btn-danger">Logout</a>
+                <a href="{{route('user.create')}}" class="btn btn-success mr-2">Create New User</a>
+                <a href="{{route('user.index')}}" class="btn btn-warning mr-2">User List</a>
+                <a href="{{route('logout.index')}}" class="btn btn-danger">Logout</a>
             </div>
         </div>
     </main>

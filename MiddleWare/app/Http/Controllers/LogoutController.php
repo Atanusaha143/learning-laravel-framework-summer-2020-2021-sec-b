@@ -13,6 +13,6 @@ class LogoutController extends Controller
         {
             session()->forget('login');
         }
-        return redirect('/login');
+        return redirect()->route('home.index');
     }
 }

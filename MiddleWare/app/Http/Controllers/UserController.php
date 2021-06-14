@@ -70,7 +70,7 @@ class UserController extends Controller
         file_put_contents($file_path, $json);
 
         //Redirect to user list
-        return redirect('/user/list');
+        return redirect()->route('user.index');
     }
 
     public function delete($id)
@@ -100,6 +100,6 @@ class UserController extends Controller
         file_put_contents($file_path, $json);
 
         //Redirect to user list
-        return redirect('/user/list');
+        return redirect()->route('user.index');
     }
 }

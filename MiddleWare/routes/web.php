@@ -25,30 +25,30 @@ use App\Http\Controllers\CreateController;
 //Route::get('/login','App\Http\Controllers\LoginController@index'); 1st Way where no need include 'use'
 
 // Login
-Route::get('/login',[LoginController::class, 'index']); // 2nd way where including 'use' is must
+Route::get('/login',[LoginController::class, 'index'])->name('login.index'); // 2nd way where including 'use' is must
 Route::post('/login',[LoginController::class, 'verify']);
 
 
 Route::group(['middleware' => ['sess']],function(){
 
     // Home
-    Route::get('/home',[HomeController::class, 'index'])->middleware('sess');
+    Route::get('/home',[HomeController::class, 'index'])->middleware('sess')->name('home.index');
     // Logout
-    Route::get('/logout',[LogoutController::class, 'index']);
+    Route::get('/logout',[LogoutController::class, 'index'])->name('logout.index');
     // User List
-    Route::get('/user/list',[UserController::class, 'index']);
-    Route::get('/user/details/{id}',[UserController::class, 'details']);
+    Route::get('/user/list',[UserController::class, 'index'])->name('user.index');
+    Route::get('/user/details/{id}',[UserController::class, 'details'])->name('user.details');
 
     // works if only user is admin
     Route::group(['middleware' => ['typeCheck']],function(){
         
         //Modify User List
-        Route::get('/user/edit/{id}',[UserController::class, 'edit']);
+        Route::get('/user/edit/{id}',[UserController::class, 'edit'])->name('user.edit');
         Route::post('/user/edit/{id}',[UserController::class, 'verifyEdit']);
-        Route::get('/user/delete/{id}',[UserController::class, 'delete']);
+        Route::get('/user/delete/{id}',[UserController::class, 'delete'])->name('user.delete');
 
         // Create User
-        Route::get('/user/create',[CreateController::class, 'index']);
+        Route::get('/user/create',[CreateController::class, 'index'])->name('user.create');
         Route::post('/user/create',[CreateController::class, 'create']);
     });
 

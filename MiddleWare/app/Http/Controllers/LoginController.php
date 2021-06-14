@@ -45,7 +45,7 @@ class LoginController extends Controller
             {
                 $req->session()->put('login','1');
                 $req->session()->put('username',$uname);
-                return redirect('/home');
+                return redirect()->route('home.index');
             }
         }
         $req->session()->flash('loginFailedMessage','Invalid User');

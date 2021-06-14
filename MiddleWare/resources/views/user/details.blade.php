@@ -31,7 +31,7 @@
                     @endforeach
                     <tr>
                         <td colspan="2">
-                            <a href="/user/list" class="btn btn-secondary btn-block">Back</a>
+                            <a href="{{route('user.index')}}" class="btn btn-secondary btn-block">Back</a>
                         </td>
                     </tr>
                 </table>
