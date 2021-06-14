@@ -7,8 +7,6 @@
     <!-- for bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
     crossorigin="anonymous">
-    <!-- google recaptcha  -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Create User</title>
 </head>
 <body>
@@ -23,9 +21,9 @@
         </div>
         <div class="row justify-content-center mt-2">
             <div class="col-6">
+            <form method="POST">
                 <table class="table table-striped table-bordered">
                     <tr>
-                        <form method="POST">
                             <tr>
                                 <td>Name</td>
                                 <td>
@@ -53,7 +51,14 @@
                             <tr>
                                 <td colspan="2">
                                     <div class="row justify-content-center">
-                                        <div class="g-recaptcha" data-sitekey="6LdDVS8bAAAAAH5Nkj59zh6wXlLm3omnaILpWL_Y" required></div>
+                                        {!! NoCaptcha::renderJs() !!}
+                                        @if ($errors->has('g-recaptcha-response'))
+                                        <span class="help-block">
+                                            <strong>{{ $errors->first('g-recaptcha-response') }}</strong>
+                                        </span>
+                                        @endif
+                                        {!! NoCaptcha::display() !!}
+                                        {{ csrf_field() }}
                                     </div>
                                 </td>
                             </tr>
@@ -71,7 +76,8 @@
                     </tr>
                 </table>
             </div>
-        </div>
+            </form>
+        </div>                                
     </div>
 </body>
 </html>

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 
 class CreateController extends Controller
 {
@@ -13,6 +14,23 @@ class CreateController extends Controller
 
     public function create(Request $req) 
     {
+
+        $messages = [
+            'g-recaptcha-response.required' => 'You must check the reCAPTCHA.',
+            'g-recaptcha-response.captcha' => 'Captcha error! try again later or contact site admin.',
+        ];
+ 
+        $validator = Validator::make($req->all(), [
+            'g-recaptcha-response' => 'required|captcha'
+        ], $messages);
+        
+        if ($validator->fails()) {
+            return redirect('/user/create')
+                        ->withErrors($validator)
+                        ->withInput();
+        }
+
+
         $uname = $req->name;
         $email = $req->email;
         $pass = $req->password;
