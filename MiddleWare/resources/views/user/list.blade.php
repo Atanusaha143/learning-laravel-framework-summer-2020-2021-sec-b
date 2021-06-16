@@ -28,9 +28,9 @@
                                 <td>{{$user['id']}}</td>
                                 <td>{{$user['username']}}</td>
                                 <td>
-                                    <a href="/user/details/{{$user['id']}}" class="btn btn-success mr-2">Details</a>
-                                    <a href="/user/edit/{{$user['id']}}" class="btn btn-warning mr-2">Edit</a>
-                                    <a href="/user/delete/{{$user['id']}}" class="btn btn-danger">Delete</a>
+                                    <a href="{{route('user.details',$user['id'])}}" class="btn btn-success mr-2">Details</a>
+                                    <a href="{{route('user.edit',$user['id'])}}" class="btn btn-warning mr-2">Edit</a>
+                                    <a href="{{route('user.delete',$user['id'])}}" class="btn btn-danger">Delete</a>
                                 </td>
                             </tr>
                         @endif
