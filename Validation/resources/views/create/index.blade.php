@@ -28,24 +28,28 @@
                                 <td>Name</td>
                                 <td>
                                     <input type="text" name="name" class="form-control">
+                                    <span class="text-danger">{{$errors->first('name')}}</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>
                                     <input type="email" name="email" class="form-control">
+                                    <span class="text-danger">{{$errors->first('email')}}</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Password</td>
                                 <td>
                                     <input type="password" name="password" class="form-control">
+                                    <span class="text-danger">{{$errors->first('password')}}</span>
                                 </td>
                             </tr>
                             <tr>
                                 <td>Confirm Password</td>
                                 <td>
                                     <input type="password" name="cpassword" class="form-control">
+                                    <span class="text-danger">{{$errors->first('cpassword')}}</span>
                                 </td>
                             </tr>
                             <tr>

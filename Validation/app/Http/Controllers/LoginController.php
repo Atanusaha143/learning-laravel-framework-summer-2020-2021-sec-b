@@ -65,7 +65,8 @@ class LoginController extends Controller
             'password' => 'required|min:8'
         ])->validate();*/
         
-        $validation = Validator::make($req->all(), [
+        // Passing input value
+        /*$validation = Validator::make($req->all(), [
             'username' => 'required|min:4', 
             'password' => 'required|min:8'
         ]);
@@ -73,7 +74,7 @@ class LoginController extends Controller
         if($validation->fails())
         {
             return back()->with('errors', $validation->errors())->withInput();
-        }
+        }*/
 
         $uname = $req->username;
         $pass = $req->password;
