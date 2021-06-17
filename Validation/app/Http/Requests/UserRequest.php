@@ -25,7 +25,7 @@ class UserRequest extends FormRequest
     {
         return [
             'username' => 'required|min:4', 
-            'password' => 'required|min:8'
+            'password' => 'required|min:4'
         ];
     }
 
@@ -35,7 +35,7 @@ class UserRequest extends FormRequest
             'username.required' => 'Please enter username',
             'username.min' => 'Minimum 4 characters required',
             'password.required' => 'Please enter password',
-            'password.min' => 'Minimum 8 characters required',
+            'password.min' => 'Minimum 4 characters required',
         ];
     }
 }
