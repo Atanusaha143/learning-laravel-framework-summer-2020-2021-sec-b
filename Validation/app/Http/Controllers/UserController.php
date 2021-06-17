@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UpdateRequest;
 
 class UserController extends Controller
 {
@@ -39,7 +40,7 @@ class UserController extends Controller
                                    ->with('userList', $data);
     }
 
-    public function verifyEdit($id, Request $req)
+    public function verifyEdit($id, UpdateRequest $req)
     {
         $uname = $req->name;
         $email = $req->email;

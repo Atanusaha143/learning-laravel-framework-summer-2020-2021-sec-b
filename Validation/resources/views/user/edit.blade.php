@@ -25,12 +25,14 @@
                                         <td>Name</td>
                                         <td>
                                             <input type="text" name="name" value="{{$user['username']}}" class="form-control">
+                                            <span class="text-danger">{{$errors->first('name')}}</span>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td>Email</td>
                                         <td>
                                             <input type="email" name="email" value="{{$user['email']}}" class="form-control">
+                                            <span class="text-danger">{{$errors->first('email')}}</span>
                                         </td>
                                     </tr>
                                     <tr>
