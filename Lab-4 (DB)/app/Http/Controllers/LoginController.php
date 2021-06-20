@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class LoginController extends Controller
 {
@@ -16,10 +17,19 @@ class LoginController extends Controller
     {
         $uname = $req->username;
         $pass = $req->password;
-            if($uname != "" && $pass != "")
-            {
-                return redirect('/home');
-            }
-        return redirect('/login');
+
+        //$results = User::all(); // returns object of that specfic table
+
+        $user = User::where('username', $uname)
+                    ->where('password', $pass)
+                    ->first();
+        if($user)
+        {
+            return redirect('/home');
+        }
+        else
+        {
+            return redirect('/login');
+        }
     }
 }
