@@ -13,7 +13,7 @@ class UserController extends Controller
     }
 
     public function details($id){
-        $user = User::find($id);
+        $user = User::find($id); // find is for primary_key
         return view('user.details')->with('user', $user);
     }
 
@@ -29,34 +29,16 @@ class UserController extends Controller
     }
 
     public function edit($id){
-        //find user by id from user list $user
-        $user = '';
-        $users = $this->getUserList();
-        foreach($users as $u)
-        {
-            if($u['id'] == $id)
-            {
-                $user = $u;
-                break;
-            }
-        }
+        $user = User::find($id);
         return view('user.edit')->with('user', $user);
     }
 
     public function update(Request $req, $id){
-        //craete new user array & add to list
-        //new userList
-        $users = $this->getUserList();
-        for($i=0; $i<sizeof($users); $i++)
-        {
-            if($users[$i]['id'] == $id)
-            {
-                $users[$i]['name'] = $req->name;
-                $users[$i]['email'] = $req->email;
-                break;
-            }
-        }
-        return view('user.list')->with('userList', $users);
+        $user = User::find($id);
+        $user->username = $req->username;
+        $user->email = $req->email;
+        $user->save();
+        return redirect('user/list');
     }
 
     public function delete($id){

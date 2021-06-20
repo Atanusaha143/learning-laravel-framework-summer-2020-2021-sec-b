@@ -21,7 +21,7 @@
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <input type="text" name="name" value="{{$user['name']}}" class="form-control">
+                            <input type="text" name="username" value="{{$user['username']}}" class="form-control">
                         </td>
                     </tr>
                     <tr>
