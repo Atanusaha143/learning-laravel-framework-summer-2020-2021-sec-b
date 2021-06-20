@@ -13,14 +13,7 @@ class UserController extends Controller
     }
 
     public function details($id){
-        $users = $this->getUserList();
-        $user = '';
-        foreach($users as $u){
-            if($u['id'] == $id){
-                $user = $u;
-                break;
-            }
-        }
+        $user = User::find($id);
         return view('user.details')->with('user', $user);
     }
 

@@ -29,9 +29,9 @@
                             <td>{{$user['username']}}</td>
                             <td>{{$user['email']}}</td>
                             <td>
-                                <a href="/user/details/{{$user['id']}}" class="btn btn-success mr-2">Details</a>
-                                <a href="/user/edit/{{$user['id']}}" class="btn btn-warning mr-2">Update</a>
-                                <a href="/user/delete/{{$user['id']}}" class="btn btn-danger mr-2">Delete</a>
+                                <a href="/user/details/{{$user['user_id']}}" class="btn btn-success mr-2">Details</a>
+                                <a href="/user/edit/{{$user['user_id']}}" class="btn btn-warning mr-2">Update</a>
+                                <a href="/user/delete/{{$user['user_id']}}" class="btn btn-danger mr-2">Delete</a>
                             </td>
                         </tr>
                     @endforeach
