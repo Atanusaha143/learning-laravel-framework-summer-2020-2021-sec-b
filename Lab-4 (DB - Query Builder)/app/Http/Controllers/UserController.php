@@ -15,7 +15,7 @@ class UserController extends Controller
 
     public function details($id)
     {
-        $user = User::find($id); // find is for primary_key
+        $user = DB::table('all_users')->where('user_id', $id)->first();
         return view('user.details')->with('user', $user);
     }
 
