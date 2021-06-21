@@ -23,8 +23,8 @@
                         <th> Email </th>
                     </tr>
                         <tr>
-                            <td>{{$user['username']}}</td>
-                            <td>{{$user['email']}}</td>
+                            <td>{{$user->username}}</td>
+                            <td>{{$user->email}}</td>
                         </tr>
                         <tr>
                             <td colspan="2">

@@ -48,13 +48,13 @@ class UserController extends Controller
 
     public function delete($id)
     {
-        $user = User::find($id);
+        $user = DB::table('all_users')->where('user_id', $id)->first();
         return view('user.delete')->with('user', $user);
     }
 
     public function destroy($id)
     {
-        User::destroy($id);
+        DB::table('all_users')->where('user_id',$id)->delete();
         return redirect('user/list');
     }
 }
