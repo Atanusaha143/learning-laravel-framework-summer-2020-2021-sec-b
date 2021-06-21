@@ -20,21 +20,33 @@
                     <tr>
                         <form method="POST">
                             <tr>
-                                <td>Id</td>
+                                <td>Username</td>
                                 <td>
-                                    <input type="text" name="id" class="form-control">
+                                    <input type="text" name="username" class="form-control">
                                 </td>
                             </tr>
                             <tr>
-                                <td>Name</td>
+                                <td>Password</td>
                                 <td>
-                                    <input type="text" name="name" class="form-control">
+                                    <input type="password" name="password" class="form-control">
                                 </td>
                             </tr>
                             <tr>
                                 <td>Email</td>
                                 <td>
                                     <input type="email" name="email" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Status</td>
+                                <td>
+                                    <input type="text" name="status" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Type</td>
+                                <td>
+                                    <input type="text" name="type" class="form-control">
                                 </td>
                             </tr>
                             <tr>

@@ -22,10 +22,15 @@ class UserController extends Controller
     }
 
     public function insert(Request $req){
-        $users = $this->getUserList();
-        $user = ['id'=>$req->id, 'name'=>$req->name, 'email'=>$req->email];
-        array_push($users, $user);
-        return view('user.list')->with('userList', $users);
+        $user = new User;
+        $user->username = $req->username;
+        $user->password = $req->password;
+        $user->email = $req->email;
+        $user->status = $req->status;
+        $user->type = $req->type; 
+
+        $user->save();
+        return redirect('user/list');
     }
 
     public function edit($id){
