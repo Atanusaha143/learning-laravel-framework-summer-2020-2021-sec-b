@@ -26,14 +26,9 @@ class UserController extends Controller
 
     public function insert(Request $req)
     {
-        $user = new User;
-        $user->username = $req->username;
-        $user->password = $req->password;
-        $user->email = $req->email;
-        $user->status = $req->status;
-        $user->type = $req->type; 
-
-        $user->save();
+        DB::table('all_users')->insert(
+            ['username' => $req->username, 'password' => $req->password, 'email' => $req->email, 'status' => $req->status, 'type' => $req->type]
+        );
         return redirect('user/list');
     }
 
