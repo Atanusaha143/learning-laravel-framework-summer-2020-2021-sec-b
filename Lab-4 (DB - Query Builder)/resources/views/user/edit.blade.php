@@ -21,13 +21,13 @@
                     <tr>
                         <td>Name:</td>
                         <td>
-                            <input type="text" name="username" value="{{$user['username']}}" class="form-control">
+                            <input type="text" name="username" value="{{$user->username}}" class="form-control">
                         </td>
                     </tr>
                     <tr>
                         <td>Email:</td>
                         <td>
-                            <input type="email" name="email" value="{{$user['email']}}" class="form-control">
+                            <input type="email" name="email" value="{{$user->email}}" class="form-control">
                         </td>
                     </tr>
                     <tr>

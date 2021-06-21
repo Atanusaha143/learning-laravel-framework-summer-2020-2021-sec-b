@@ -34,16 +34,15 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $user = User::find($id);
+        $user = DB::table('all_users')->where('user_id', $id)->first();
         return view('user.edit')->with('user', $user);
     }
 
     public function update(Request $req, $id)
     {
-        $user = User::find($id);
-        $user->username = $req->username;
-        $user->email = $req->email;
-        $user->save();
+        DB::table('all_users')->where('user_id', $id)
+                          ->update(['username' => $req->username, 'email' => $req->email]);
+        
         return redirect('user/list');
     }
 
